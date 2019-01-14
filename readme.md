@@ -1,5 +1,5 @@
 # Fracty
-Fracty is a decimal-to-fraction conversion module that solves the many well known problems with decimal-to-fraction conversion modules. Those common problems include overlooking conversion inaccuracies in the IEEE Standard for Floating-Point Arithmetic (IEEE 754), mishandling numbers with trailing repeat patterns, and incorrect or partial pattern recognition.
+_Fracty_ is a decimal-to-fraction conversion module that solves the many well known problems with decimal-to-fraction conversion modules. Those common problems include overlooking conversion inaccuracies in the IEEE Standard for Floating-Point Arithmetic (IEEE 754), mishandling numbers with trailing repeat patterns, and incorrect or partial pattern recognition.
 
 <img src="https://user-images.githubusercontent.com/45696445/51096139-5a54aa80-1788-11e9-9555-c1ec0635f483.gif">
 
@@ -47,7 +47,7 @@ console.log(fracty(-1.1425));
 _________________________
 &nbsp;
 ## Notes
-Fracty simply takes one argument, a number without any rounding and, in keeping with the most standard numbering conventions of monetary divisibility, etc., imagines that any trailing repeating patterns beyond two decimal places continue infinitely, and returns that input as a string of the fully reduced fraction equivalent.
+_Fracty_ simply takes one argument, a number without any rounding and, in keeping with the most standard numbering conventions of monetary divisibility, etc., imagines that any trailing repeating patterns beyond two decimal places continue infinitely, and returns that input as a string of the fully reduced fraction equivalent.
 
 ## Installation
 With [npm](http://npmjs.org) do

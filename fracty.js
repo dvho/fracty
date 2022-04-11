@@ -70,13 +70,13 @@ module.exports = function (number) { //IEEE 754 Floating Point conversion proble
     let pattern = decimalRev.match(patternSearch); //If there's a pattern, it's full sequence is in [0] of this array and the single unit is in [1] but it may still need to be reduced further.
 
     if (pattern && decimal.length > 2) { //In keeping with the most standard numbering conventions of monetary divisibility, etc., if there's a pattern beyond two decimal places, reverse back the pattern that the greedy regex deemed a single unit, and the full pattern sequence, respectively.
-        patternSequence = pattern[0].split('').reverse().join('');
-        endPattern = pattern[1].split('').reverse().join('');
+        let patternSequence = pattern[0].split('').reverse().join('');
+        let endPattern = pattern[1].split('').reverse().join('');
 
         if (endPattern.length > 1) { //Test to see if the pattern unit is actually a single repeating digit.
             let endPatternArray = endPattern.split('');
             let testSingleUnit = 1;
-            for (i = 0; i < endPatternArray.length; i++) {
+            for (let i = 0; i < endPatternArray.length; i++) {
                 testSingleUnit /= endPatternArray[0]/endPatternArray[i];
             }
 
@@ -121,7 +121,7 @@ function reduce(numerator, denominator, integer, type, rep) {
     const primeNumberArray = [2, 3, 5]; //If the numerator isn't from a repeating decimal case, the initialized array of prime numbers will suffice to find the common denominators.
 
     if (rep === true) {  //If the numerator is from a repeating decimal case, fracty generates an array of prime numbers from 2 to the square root of the numerator, loops over the array to find the common denominators, and reduces the fraction. Since reducing by prime numbers beyond i^2 isn't necessary, fracty creates and array of the prime numbers that, when squared, are still less than or equal to the numerator.
-        for (i = 3; i * i <= numerator; i+=2) {
+        for (let i = 3; i * i <= numerator; i+=2) {
             if (numerator % i === 0) {
                 primeNumberArray.push(i);
             }

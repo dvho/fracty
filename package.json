@@ -15,6 +15,15 @@
         "floating-point",
         "IEEE 754"
     ],
+    "homepage": "http://github.com/dvho/fracty",
+    "repository": {
+      "type": "git",
+      "url": "http://github.com/dvho/fracty"
+    },
+    "bugs": {
+      "mail": "email6@gmail.com",
+      "url": "http://github.com/dvho/fracty/issues"
+    },
     "author": "David H.",
     "license": "MIT"
 }

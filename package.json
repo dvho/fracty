@@ -1,11 +1,17 @@
 {
     "name": "fracty",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "Fracty is a decimal-to-fraction conversion module that solves the many well known problems with decimal-to-fraction conversion modules. Those common problems include overlooking conversion inaccuracies in the IEEE Standard for Floating-Point Arithmetic (IEEE 754), mishandling numbers with trailing repeat patterns, and incorrect or partial pattern recognition. Fracty simply takes one argument, a number without any rounding and, in keeping with the most standard numbering conventions of monetary divisibility, etc., imagines that any trailing repeating patterns beyond two decimal places continue infinitely, and returns that input as a string of the fully reduced fraction equivalent.",
     "main": "fracty.js",
+    "files": [
+        "package.json",
+        "fracty.js",
+        "fracty.test.js",
+        "readme.md"
+    ],
     "scripts": {
         "test": "node fracty.test.js",
-        "prepublish": "npm test"
+        "prepublishOnly": "npm test"
     },
     "keywords": [
         "fraction",
